@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Pricelist</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo_mbak_merry-removebg-preview.png" alt="Logo">
+        <span>NonaMarrie</span>
+    </div>
+    <h1>Product Pricelist</h1>
+
+
+  <div class="container">
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Deskripsi</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr><td>Prol Tape</td><td>IDR 6,000/pcs</td><td>Olahan Tape</td></tr>
+          <tr><td>Bolu Tape</td><td>IDR 5,000/pcs</td><td>Olahan Tape</td></tr>
+          <tr><td>Muffin Tape</td><td>IDR 6,000/pcs</td><td>Olahan Tape</td></tr>
+
+          <tr><td>Prol Tape</td><td>IDR 40,000</td><td>Per-loyang</td></tr>
+          <tr><td>Prol Tape Brownies</td><td>IDR 75,000</td><td>Per-loyang</td></tr>
+          <tr><td>Prol Tape Burnt Cheese Cake</td><td>IDR 78,000</td><td>Per-loyang</td></tr>
+          <tr><td>Buttercake Tape</td><td>IDR 48,000</td><td>Per-loyang</td></tr>
+          <tr><td>Bolutape</td><td>IDR 45,000</td><td>Per-loyang</td></tr>
+          <tr><td>Marmer Cake Tape</td><td>IDR 45,000</td><td>Per-loyang</td></tr>
+
+          <tr><td>Fruit Tart</td><td>IDR 6,500/pcs</td><td>Olahan Pie/Tart</td></tr>
+          <tr><td>Corned Pie</td><td>IDR 4,500/pcs</td><td>Olahan Pie/Tart</td></tr>
+          <tr><td>Fruit Tart medium size</td><td>Start from IDR 145,000</td><td>Olahan Pie/Tart</td></tr>
+
+          <tr><td>Bolu kukus ketan hitam</td><td>IDR 50,000</td><td>Olahan Cake/Bolu</td></tr>
+          <tr><td>Brownies kukus ketan hitam keju</td><td>IDR 48,500</td><td>Olahan Cake/Bolu</td></tr>
+          <tr><td>Brownies kukus</td><td>IDR 55,000</td><td>Olahan Cake/Bolu</td></tr>
+          <tr><td>Marmer cake</td><td>IDR 48,000</td><td>Olahan Cake/Bolu</td></tr>
+          <tr><td>Coklat cake</td><td>IDR 55,000</td><td>Olahan Cake/Bolu</td></tr>
+          <tr><td>Bolu Gulung Abon Ayam</td><td>IDR 85,000</td><td>Olahan Cake/Bolu</td></tr>
+
+          <tr><td>Risol mayo</td><td>IDR 6,500/pcs</td><td>Lainnya</td></tr>
+          <tr><td>Risol ragout ayam</td><td>IDR 5,500/pcs</td><td>Lainnya</td></tr>
+          <tr><td>Sosis solo</td><td>IDR 6,500/pcs</td><td>Lainnya</td></tr>
+          <tr><td>Pastel tutup</td><td>IDR 12,500/pcs</td><td>Lainnya</td></tr>
+          <tr><td>Putu Belanda</td><td>IDR 4,500/pcs</td><td>Lainnya</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#productTable').DataTable({
+        responsive: true,
+        paging: false,
+        info: false,
+        searching: true,
+        language: {
+          search: "Search product:"
+        }
+      });
+    });
+    for (let i = 0; i < 15; i++) {
+      const cookie = document.createElement('div');
+      cookie.className = 'cookie';
+      cookie.style.left = Math.random() * 100 + 'vw';
+      cookie.style.top = Math.random() * 100 + 'vh';
+      cookie.style.animationDuration = (10 + Math.random() * 20) + 's';
+      document.querySelector('.container').appendChild(cookie);
+    }
+  </script>
+</body>
+</html>
